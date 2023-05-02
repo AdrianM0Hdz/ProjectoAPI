@@ -20,9 +20,9 @@ class ManagerUserSerializer(serializers.HyperlinkedModelSerializer):
 class PartidaFallingObjectsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PartidaFallingObjects
-        fields = ['id', 'player', 'score', 'time']
+        fields = ['id', 'player', 'score', 'time_taken']
 
 class PartidaEncontrarDiferenciasSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PartidaEncontrarDiferencias
-        fields = ['id', 'player', 'maxtime', 'n_objects', 'time', 'found_objects']
+        fields = ['id', 'player', 'maxtime', 'n_objects', 'time_taken', 'found_objects']
