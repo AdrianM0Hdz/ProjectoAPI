@@ -22,6 +22,8 @@ from user_resource import views
 router = routers.DefaultRouter() 
 router.register(f'player_user', views.PlayerUserViewSet)
 router.register(f'manager_user', views.ManagerUserViewSet) 
+router.register(f'partida_falling_objects', views.PartidaFallingObjectsViewSet)
+router.register(f'partida_econtrar_diferencias', views.PartidaEncontrarDiferenciasViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
