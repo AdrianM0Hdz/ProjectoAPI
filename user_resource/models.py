@@ -15,7 +15,7 @@ class PlayerUser(models.Model):
 class PartidaFallingObjects(models.Model):
     player = models.ForeignKey(PlayerUser, on_delete=models.CASCADE)
     score = models.IntegerField(null=False)
-    time_taken = models.IntegerField(null=False)
+    time_taken = models.FloatField(null=False)
 
 class PartidaEncontrarDiferencias(models.Model):
     player = models.ForeignKey(PlayerUser, on_delete=models.CASCADE)
