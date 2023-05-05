@@ -1,4 +1,6 @@
+import django
 from rest_framework import viewsets, permissions
+from rest_framework.response import Response
 
 from user_resource.serializers import (
     ManagerUserSerializer, 
@@ -14,6 +16,11 @@ from user_resource.models import (
     PartidaEncontrarDiferencias
 )
 
+def get_user_fullname(id):
+    """changes id of player user for the name of the player"""
+    print(id)
+    return id 
+
 # Create your views here.
 
 class ManagerUserViewSet(viewsets.ModelViewSet):
@@ -25,8 +32,8 @@ class PlayerUserViewSet(viewsets.ModelViewSet):
     queryset = PlayerUser.objects.all()
     serializer_class = PlayerUserSerializer
     permission_classes = []
-
-class PartidaFallingObjectsViewSet(viewsets.ModelViewSet):
+    
+class PartidaFallingObjectsViewSet(viewsets.ModelViewSet):    
     queryset = PartidaFallingObjects.objects.all()
     serializer_class = PartidaFallingObjectsSerializer
     permission_classes = []
